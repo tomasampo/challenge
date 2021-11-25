@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "725a1077-1afe-4c5e-b93c-27f6eb997d2d",
+		"name": "Tenpo Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"login\":\"tomas.ampo\",\n    \"password\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/accounts/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"accounts",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"login\":\"tomas.ampo\",\n    \"password\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0b21hcy5hbXBvIiwiYXV0aCI6IiIsImV4cCI6MTYzNzg0MjM5Nn0.JBoB8e1T2vhk8BTz_ZqfngRdEDmA15rPpHVagaggNBDjQNNUoLTl27AgxQOK_WnCP5nTAcghfNO7pVDx4pqkVA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "multiply",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0b21hcy5hbXBvIiwiYXV0aCI6IiIsImV4cCI6MTYzNzg0MjIyOH0.G6vi4-OU7_9MP-KtkC3AetWsOZyXam-4Fd6U5hYCQ5Zlz45geGH68qYSblw5JTOSssFZfsJrIAgHz6EjJkyuMg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/calculator/multiply?multiplier=2&multiplicand=20",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"calculator",
+						"multiply"
+					],
+					"query": [
+						{
+							"key": "multiplier",
+							"value": "2"
+						},
+						{
+							"key": "multiplicand",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "trackings",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0b21hcy5hbXBvIiwiYXV0aCI6IiIsImV4cCI6MTYzNzg1NTE2MX0.Vllov3IlPr_zecUTSFNIezMxQtaoHJI-Fe2eFlI5Go2GJb6x9mLazN-ky87wzGU_Apv5q7Sd0BRE9yTZrVXgvA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/trackings?page=0&size=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"trackings"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api-docs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v2/api-docs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v2",
+						"api-docs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

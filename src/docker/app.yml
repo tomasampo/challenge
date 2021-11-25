@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  challenge-app:
+    image: challenge
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://challenge-postgresql:5432/challenge
+    ports:
+      - 127.0.0.1:8080:8080
+  challenge-postgresql:
+    image: postgres:13.5
+    #    volumes:
+    #      - ~/data/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=challenge
+      - POSTGRES_PASSWORD=12345
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - POSTGRES_DB=challenge
+    ports:
+      - 127.0.0.1:5432:5432
